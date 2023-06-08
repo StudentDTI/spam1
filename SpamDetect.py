@@ -23,11 +23,11 @@ def spamdetection():
     else:
         sample = user
         data = cv.transform([sample]).toarray()
-        if a=='ham':
-            a='Not A Spam Mail'
-        else:
-            a='Spam Mail'
         st.title(a)
         a = clf.predict(data)
+        if a=='ham':
+           a='Not A Spam Mail'
+        else:
+           a='Spam Mail'
         st.title(a)
 spamdetection()
